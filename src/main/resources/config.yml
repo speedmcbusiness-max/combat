@@ -1,0 +1,39 @@
+# How long (seconds) a player stays in combat after the LAST hit.
+# Every new hit resets the timer, so while they keep fighting it never runs out.
+combat-time: 15
+
+# Kill players who disconnect while in combat.
+kill-on-combat-log: true
+
+# Commands that CAN be used during combat (whitelist wins over blacklist).
+whitelist:
+  - msg
+  - r
+  - tell
+
+# Commands that CANNOT be used during combat.
+blacklist:
+  - spawn
+  - home
+  - homes
+  - sethome
+  - tp
+  - tpa
+  - tpaccept
+  - warp
+  - back
+  - rtp
+
+# If true, every command that is NOT in the whitelist is blocked in combat.
+# If false, only blacklisted commands are blocked.
+block-unlisted-commands: false
+
+messages:
+  prefix: "&c[Combat] &7"
+  tagged: "You are now in combat! Do not log out for &e%time%s&7."
+  untagged: "&aYou are no longer in combat."
+  actionbar: "&cIn combat: &e%time%s"
+  command-blocked: "&cYou can't use &e/%command% &cwhile in combat!"
+  combat-log-broadcast: "&e%player% &clogged out during combat and was killed!"
+  killed-cleared: "&aYour combat timer was removed."
+  no-permission: "&cYou don't have permission."

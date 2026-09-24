@@ -1,0 +1,17 @@
+name: CombatTag
+main: me.combat.CombatPlugin
+version: 1.0
+api-version: '1.20'
+description: Combat tag with combat-log punishment and command whitelist/blacklist.
+commands:
+  combat:
+    description: CombatTag admin command
+    usage: /combat <reload|status|whitelist|blacklist>
+    aliases: [ct]
+permissions:
+  combat.admin:
+    description: Manage the combat plugin
+    default: op
+  combat.bypass:
+    description: Ignore command restrictions while in combat
+    default: false
